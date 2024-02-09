@@ -1,0 +1,14 @@
+Average Energy = 0.65906
+Average Valence = 0.484443
+Average Danceability = 0.71646
+
+1)The listener's audio aura is marked by a moderate energy level(0.65906), showcasing a blend of both lively and serene tracks.
+With a valence score of O.484443, there's a diverse emotional spectrum, encompassing positive and more subdued tones within the 100 songs.
+Moreover, a high danceability score of 0.71646 indicates a penchant for music that is not only vibrant but also rhythmically engaging,
+contributing to an overall dynamic listening experience.
+
+
+2)While the current calculation provides a broad overview, it may lack personalisation and fail to capture nuances in the listener's preferences.
+To improve accuracy, incorporating user-specific weighting for energy, valence and danceability could better reflect individual tastes.
+Additionally, temporal aspects, such as the recency of song listens, and incorporating genre-specific analysis could offer a more refined and personalised
+audio aura reflective of the listener's evolving musical prefereces.

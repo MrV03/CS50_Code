@@ -1,0 +1,63 @@
+sort1 uses: Bubble Sort
+
+How do you know?: The execution times for sort1 are consistently higher, especially on larger or partially sorted inputs.
+This characteristic aligns with Bubble sort which has a higher time complexity (O(n^2)). The constant higher times for sort1,
+across the various inputs shows a lack of adaptability and due to this struggle with different outputs, it's quadratic time complexity is shown.
+
+sort2 uses: Merge Sort
+
+How do you know?: The times for sort2 are generally lower, especially on larger or random imputs, this shows that it is merge sort,
+which has a more efficient time complexity (O(n log n)), for said larger datasets. sort2's performance stands out as efficient for these data
+sets as its logarithmic time complexity allows it to handle them better.
+
+sort3 uses: Selection Sort
+
+How do you know?: The execution times for sort3 are consistently higher, especially on ALREADY sorted or partially sorted inputs.
+This aligns with Selection sort, which is inefficient on such inputs and has a higher time complexity (O(n^2)).
+
+Conclusions based on several tests and observed results are as follows:
+
+random5000:
+sort1 = time = 0.078s
+sort2 = time = 0.032s
+sort3 = time = 0.053s
+
+random10000:
+sort1 = time = 0.251s
+sort2 = time = 0.150s
+sort3 = time = 0.137s
+
+random50000:
+sort1 = time = 8.838s
+sort2 = time = 14.319s
+sort3 = time = 7.021s
+
+reversed5000:
+sort1 = time = 0.080s
+sort2 = time = 0.044s
+sort3 = time = 0.100s
+
+reversed100000:
+sort1 = time = 0.317s
+sort2 = time = 0.072s
+sort3 = time = 0.170s
+
+reversed50000:
+sort1 = time = 10.912s
+sort2 = time = 8.909s
+sort3 = time = 16.869s
+
+sorted5000:
+sort1 = time = 0.051s
+sort2 = time = 0.041s
+sort3 = time = 0.047s
+
+sorted10000:
+sort1 = time = 0.081s
+sort2 = time = 0.087s
+sort3 = time = 0.145s
+
+sorted50000:
+sort1 = time = 2.303s
+sort2 = time = 2.993s
+sort3 = time = 4.248s
