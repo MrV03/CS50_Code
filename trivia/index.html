@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            // TODO: Add code to check answers to questions
+            function checkAnswer(button, isCorrect){
+                if(isCorrect){
+                    button.style.backgroundColor = 'green';
+                    document.getElementById('multipleChoiceResult').innerText = 'Correct';
+
+                } else {
+                    button.style.backgroundColor = 'red';
+                    document.getElementById('multipleChoiceResult').innerText = 'Incorrect';
+
+                }
+                const buttons = document.querySelectorAll('.section button');
+                buttons.forEach(btn => {
+                        if (btn !== button) {
+                            btn.disabled = true;
+                        }
+                });
+
+            }
+
+            function checkFreeResponse(){
+                const userAnswer = document.getElementById('freeResponseAnswer').value.toLowerCase();
+                const correctAnswer = 'tokyo';
+                const resultParagraph = document.getElementById('freeResponseResult');
+
+                if(userAnswer === correctAnswer){
+                    document.getElementById('freeResponseAnswer').style.backgroundColor = 'green';
+                    resultParagraph.innerText = 'Correct!';
+                } else {
+                    document.getElementById('freeResponseAnswer').style.backgroundColor = 'red';
+                    resultParagraph.innerText = 'Incorrect';
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!-- TODO: Add multiple choice question here -->
+                <h3 id = "multipleChoiceQuestion">What is the Capital of France?</h3>
+                <button onclick="checkAnswer(this, true)">Paris</button>
+                <button onclick="checkAnswer(this, false)">London</button>
+                <button onclick="checkAnswer(this, false)">Berlin</button>
+                <button onclick="checkAnswer(this, false)">New York</button>
+                <p id="multipleChoiceResult"></p>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- TODO: Add free response question here -->
+                <h3 id="freeResponseQuestion">What is the capital of Japan?</h3>
+                <input type="text" id="freeResponseAnswer">
+                <button onclick="checkFreeResponse()">Submit</button>
+                <p id="freeResponseResult"></p>
+            </div>
+        </div>
+    </body>
+</html>
